@@ -1,0 +1,70 @@
+
+
+//ESTO ES IMPORTANTE PARA QUE EL VIDEO QUEDE COMO BACKGROUND
+#backVideo{
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  right: -400px; //ESTA PROPIEDAD SE LA DI PARA QUE CUANDO SE HAGA RESPONSIVE SE CENTRE EN LA MUJER DE FONDO Y NO EN OTRA COSA...
+  //border: 1px solid #00f;
+}
+.mainContent{
+  position: absolute;
+  //border: 1px solid #3f3;
+  height: 2000px;
+  background: linear-gradient(to left top, transparent 60%, #000, #000),
+            linear-gradient(to top, #000 5%, transparent),
+            linear-gradient(to left, transparent 80%, #000);
+            top: 0;
+}
+.headerRow{
+  position: sticky;
+  top:1px;
+}
+
+.header{
+  //border: 1px solid #f00;
+  padding: 10px;
+  background: linear-gradient(to left, transparent 20%, #000);
+}
+
+// .aside{
+//   //border: 1px solid #0ff;
+//   padding: 10px;
+// }
+
+mat-divider{
+  // background-color: #fff;
+  background: linear-gradient(to left, transparent 10%, #fff);
+  opacity: 0.3;
+  height: 2px;
+}
+
+.section{
+  //border: 1px solid #00f;
+  padding: 10px;
+  width: 75%;
+}
+.sectionImg{
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+p{
+  color: #fff;
+}
+*{
+  color: #fff;
+}
+
+.footer{
+  border-top: 1px solid rgba(255,255,255, 0.1);
+  position: fixed;
+  top:96vh;
+  background: linear-gradient(to left, transparent 20%, #000);
+
+}
+
+
+
