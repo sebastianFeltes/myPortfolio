@@ -5,15 +5,15 @@
   position: fixed;
   min-width: 100%;
   min-height: 100%;
-  top: 0;
-  right: -400px; //ESTA PROPIEDAD SE LA DI PARA QUE CUANDO SE HAGA RESPONSIVE SE CENTRE EN LA MUJER DE FONDO Y NO EN OTRA COSA...
+  top: -150px;
+  right: -500px; //ESTA PROPIEDAD SE LA DI PARA QUE CUANDO SE HAGA RESPONSIVE SE CENTRE EN LA MUJER DE FONDO Y NO EN OTRA COSA...
   //border: 1px solid #00f;
 }
 .mainContent{
   position: absolute;
   //border: 1px solid #3f3;
   height: 2000px;
-  background: linear-gradient(to left top, transparent 60%, #000, #000),
+  background: linear-gradient(to left top, transparent 90%, #000, #000),
             linear-gradient(to top, #000 5%, transparent),
             linear-gradient(to left, transparent 80%, #000);
             top: 0;
@@ -21,12 +21,14 @@
 .headerRow{
   position: sticky;
   top:1px;
+  z-index: 100;
 }
 
 .header{
   //border: 1px solid #f00;
   padding: 10px;
   background: linear-gradient(to left, transparent 20%, #000);
+
 }
 
 // .aside{
@@ -41,13 +43,18 @@ mat-divider{
   height: 2px;
 }
 
+.sectionNaside{
+  position: relative;
+  z-index: 1;
+}
+
 .section{
   //border: 1px solid #00f;
   padding: 10px;
-  width: 75%;
+  width: 100%;
 }
 .sectionImg{
-  width: 300px;
+  width: 30%;
   height: auto;
   border-radius: 10px;
 }
@@ -61,9 +68,9 @@ p{
 .footer{
   border-top: 1px solid rgba(255,255,255, 0.1);
   position: fixed;
-  top:96vh;
+  z-index: 150;
+  bottom: 3%;
   background: linear-gradient(to left, transparent 20%, #000);
-
 }
 
 
