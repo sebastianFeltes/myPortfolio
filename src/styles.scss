@@ -1,7 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@mixin text_format {
+  color: #222;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 1em;
+}
+*{
+  @include text_format();
+  font-weight: 400;
+}
+h1,h2,h3{
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
 body{
-  background-color: #000;
+  background-color: #eee;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  overflow-x: hidden;
 }
 
 html, body { height: 100%; box-sizing: border-box; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0;}
+
+.mat-menu-content:not(:empty) {
+  background-color: #fff;
+  // border: 1px solid #f00;
+  text-align: center;
+  padding: 0!important;
+  margin: 0;
+}
+
+
+//PALETA DE COLORES DE LA APP
+//PARA USARLOS TIENEN QUE USAR
+// @import '../../styles.css' si estan en una subcarpeta de components
+//sino agregar tantos "../" como niveles sean necesarios subir
+//UNA VEZ QUE IMPORTEN ESTE STYLE.CSS EN EL SCSS DE SU PANTALLA
+//USAR LOS COLORES DANDOLE EL NOMBRE DE LA VARIABLE A LA PROPIEDAD
+//POR EJ: background-color: $primaryBlue;
+$primaryBlue: #093f7c;
+$secondaryBlue: #0184f5;
+$tertiaryGray: #a5a5a5;
+$backgroundWhite: #fff;
+$fontColor: #333333;
+

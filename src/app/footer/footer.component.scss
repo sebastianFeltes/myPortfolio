@@ -1,0 +1,35 @@
+@import '../main/main.component.scss';
+
+.footer{
+  @include card;
+  // position: fixed;
+  // top: 95vh;
+  background: linear-gradient(to top, #aaa, #fff);
+  box-shadow: 0 5px 40px 5px #222;
+  border-top: 1px solid #f00;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  margin: 0;
+}
+
+strong{
+  text-shadow: 0px 2px 5px #555;
+}
+
+// @media (max-width: 650px) {
+
+// .footer{
+//   @include card;
+//   position:static;
+//   bottom: 20px;
+//   z-index: 150;
+//   background: linear-gradient(to top, #fff, #eee);
+//   border-top: 1px solid #f00;
+//   border-bottom: none;
+//   border-right: none;
+//   border-left: none;
+//   margin: 0;
+// }
+
+// }

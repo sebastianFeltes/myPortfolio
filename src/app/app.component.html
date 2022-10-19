@@ -1,108 +1,42 @@
-<!-- TUVE QUE EVITAR USAR ALGUNOS COMPONENTES DE BOOTSTRAP PORQUE INTERFERIAN CON EL FLUJO DEL VIDEO DE FONDO... USE SOLO GRID...
-LOS COMPONENTES SON TODOS DE MATERIAL :D -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <video
-        oncanplay="this.play()"
-        onloadeddata="this.muted=true"
-        muted="muted"
-        loop="loop"
-        autoplay
-        id="backVideo"
-        #videoRef
-      >
-      <!-- aca en src indicar la ruta del video y en type el tipo de archivo Your
-      browser does not support HTML5 video. -->
-        <source src="../assets/GirlSamuraiRain.mp4" type="video/mp4" />
-      </video>
-    </div>
+<router-outlet></router-outlet>
+<!--
+<video
+oncanplay="this.play()"
+onloadeddata="this.muted=true"
+muted="muted"
+loop="loop"
+autoplay
+id="backVideo"
+#videoRef
+>
+<!-- aca en src indicar la ruta del video y en type el tipo de archivo Your
+browser does not support HTML5 video. -->
+
+<!--
+
+<source src="../assets/GirlSamuraiRain.mp4" type="video/mp4" />
+</video>
+
+-->
+<!-- PHOTOGRAFY -->
+<app-main></app-main>
+<!-- HEADER SECTION -->
+  <app-header [aboutMe]="aboutMe" [skills]="skills" [myWork]="myWork" [contactMe]="contactMe"></app-header>
+  <!--BELOW GOES ABOUT ME SECTION-->
+  <div #aboutMe style="padding-top: 1vh ;">
+    <app-about-me ></app-about-me>
   </div>
-</div>
-<div class="container-fluid mainContent">
-  <div class="row headerRow">
-    <div class="col-md-12 header">
-      <mat-toolbar style="background-color: transparent">
-        <button
-          mat-icon-button
-          class="example-icon"
-          aria-label="Example icon-button with menu icon"
-          [matMenuTriggerFor]="menu"
-        >
-          <mat-icon>menu</mat-icon>
-        </button>
-        <!-- este menu es de material, se pueden agregar las opciones que quieran -->
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item>Opcion Menu 1</button>
-          <button mat-menu-item>Opcion Menu 2</button>
-        </mat-menu>
-        <span>Fondo Animado :P</span>
-        <span class="example-spacer"></span>
-        <button
-          mat-icon-button
-          class="example-icon favorite-icon"
-          aria-label="Example icon-button with heart icon"
-        >
-          <mat-icon>favorite</mat-icon>
-        </button>
-      </mat-toolbar>
-    </div>
+  <!--BELOW GOES MY SKILLS SECTION-->
+  <div #skills style="padding-top: 7vh ;">
+    <app-skills></app-skills>
   </div>
-  <div class="row sectionNaside">
-    <!-- <div class="col-md-3 aside">
-      <button mat-button>BOTON ASIDE 1</button>
-      <mat-divider></mat-divider>
-      <button mat-button>BOTON ASIDE 2</button>
-      <mat-divider></mat-divider>
-      <button mat-button>BOTON ASIDE 3</button>
-      <mat-divider></mat-divider>
-      <button mat-button>BOTON ASIDE 4</button>
-      <mat-divider></mat-divider>
-      <button mat-button>BOTON ASIDE 5</button>
-    </div> -->
-    <div class="col-md-6 section">
-      <mat-card
-        class="section-card"
-        style="background: linear-gradient(to left, transparent 50%, #000)"
-      >
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Samurai Girl</mat-card-title>
-          <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
-        </mat-card-header>
-        <img
-          mat-card-image
-          class="sectionImg"
-          src="https://c4.wallpaperflare.com/wallpaper/210/251/600/guweiz-samurai-artwork-warrior-drawing-hd-wallpaper-preview.jpg"
-          alt="samurai girl"
-        />
-        <mat-card-content>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
-            consectetur voluptatum vero! Delectus nisi sint reprehenderit
-            voluptates harum, voluptatibus non, corporis nam, inventore neque
-            optio atque. Tenetur reprehenderit eveniet quaerat! Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Officia commodi earum
-            unde officiis, quas, fugiat molestias laboriosam quam est assumenda
-            repudiandae amet ipsum deleniti at doloribus illo tenetur! Quo, cum?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            reiciendis laborum unde quasi fuga tempora harum quae molestiae
-            porro beatae, deserunt distinctio dolorum quod eaque ab, ipsum,
-            error minus voluptas.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-    </div>
+  <!--BELOW GOES MY WORK SECTION-->
+  <div #myWork style="padding-top: 7vh ;">
+    <app-my-work></app-my-work>
   </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="container-fluid text-center footer">
-        <div>Jikan Sui - Zombie Dev © Todos los derechos reservados.</div>
-      </div>
-    </div>
+  <!--BELOW GOES CONTACT SECTION-->
+  <div #contactMe style="padding-top: 7vh ;">
+    <app-contact-me></app-contact-me>
   </div>
-</div>
+
+    <app-footer></app-footer>

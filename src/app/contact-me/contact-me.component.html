@@ -1,0 +1,52 @@
+<div class="col-md-12">
+  <mat-card class="contactCard">
+    <mat-card-header>
+      <mat-card-title>
+        <p>CONTACT ME</p>
+      </mat-card-title>
+      <mat-card-subtitle>Send me a message</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form action="" [formGroup]="contactForm" (ngSubmit)="sendMessage()">
+        <div class="warning" *ngIf="contactForm.controls.name.errors">
+          <span *ngIf="contactForm.controls.name.errors.required">
+            Please, write your name...
+          </span>
+          <span *ngIf="!contactForm.controls.name.errors.minLength">
+            At least 8 characters...
+          </span>
+        </div>
+        <mat-form-field appearance="fill">
+          <mat-label>Your Name</mat-label>
+          <input matInput type="text" formControlName="name">
+        </mat-form-field>
+        <div class="warning" *ngIf="contactForm.controls.email.errors">
+          <span *ngIf="contactForm.controls.email.errors.required">
+            Please, write your email...
+          </span>
+          <span *ngIf="contactForm.controls.email.errors.email">
+            ...A valid one, please...
+          </span>
+        </div>
+        <mat-form-field appearance="fill">
+          <mat-label>Your Email</mat-label>
+          <input matInput type="email" formControlName="email">
+        </mat-form-field>
+        <div class="warning" *ngIf="contactForm.controls.message.errors">
+          <span *ngIf="contactForm.controls.message.errors.required">
+            Please, write a message...
+          </span>
+          <span *ngIf="!contactForm.controls.message.errors.minLength">
+            At least 12 characters...
+          </span>
+        </div>
+        <mat-form-field class="textArea" appearance="fill">
+          <mat-label>Your message</mat-label>
+          <textarea matInput formControlName="message" type="text"></textarea>
+        </mat-form-field>
+        <button mat-raised-button>Send</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+</div>

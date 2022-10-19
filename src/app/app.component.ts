@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'zombieDev';
 
+  @ViewChild('aboutMe')aboutMe:ElementRef|any;
+  @ViewChild('skills')skills:ElementRef|any;
+  @ViewChild('myWork')myWork:ElementRef|any;
+  @ViewChild('contactMe')contactMe:ElementRef|any;
+
 }
+
+
+
