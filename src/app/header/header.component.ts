@@ -64,7 +64,5 @@ export class HeaderComponent implements OnInit {
     $('.myWorkCard').css({'animation-name':'none'});
     $('.contactCard').css({'animation-name':'contactAnimation'});
 
-
-
   }
 }
